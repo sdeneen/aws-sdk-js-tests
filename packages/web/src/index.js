@@ -19,7 +19,7 @@ const getHTMLElement = (title, content) => {
 
 const component = async () => {
   const response = await getBrowserResponse();
-  return getHTMLElement("Data returned:", JSON.stringify(response, null, 2));
+  return getHTMLElement("Data returned:", await response.text());
 };
 
 (async () => {
